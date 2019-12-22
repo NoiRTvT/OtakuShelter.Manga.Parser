@@ -1,4 +1,4 @@
-package com.otakushelter.domain
+package com.otakushelter.domain.entities
 
 import org.jetbrains.exposed.dao.EntityID
 import org.jetbrains.exposed.dao.IntEntity

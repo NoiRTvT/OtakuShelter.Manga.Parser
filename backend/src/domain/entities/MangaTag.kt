@@ -1,4 +1,4 @@
-package com.otakushelter.domain
+package com.otakushelter.domain.entities
 
 import org.jetbrains.exposed.sql.Table
 

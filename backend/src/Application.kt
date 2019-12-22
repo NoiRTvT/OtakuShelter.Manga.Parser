@@ -1,7 +1,7 @@
 package com.otakushelter
 
 import com.otakushelter.controllers.healthCheck
-import com.otakushelter.domain.*
+import com.otakushelter.domain.entities.*
 import com.otakushelter.extensions.getStringProperty
 import com.otakushelter.utils.config
 import io.ktor.application.Application
