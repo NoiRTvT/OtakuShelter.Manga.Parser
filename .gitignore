@@ -1,0 +1,16 @@
+/.gradle
+/.idea
+/out
+/build
+*.iml
+*.ipr
+*.iws
+
+/frontend/.gradle/
+/frontend/node_modules/
+/frontend/.idea/
+/frontend/build/
+
+/backend/resources/static
+/backend/resources/applicationDev.conf
+/backend/build
