@@ -33,9 +33,11 @@ dependencies {
     compile("io.ktor:ktor-server-core:$ktor_version")
     compile("io.ktor:ktor-server-host-common:$ktor_version")
     compile("io.ktor:ktor-serialization:$ktor_version")
-    compile("org.postgresql:postgresql:42.2.8")
+    compile("io.ktor:ktor-client-core:$ktor_version")
     compile("org.jetbrains.exposed:exposed:0.17.7")
     compile("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0")
+    compile("org.postgresql:postgresql:42.2.8")
+    compile("org.jsoup:jsoup:1.12.1")
 
     testCompile("io.ktor:ktor-server-tests:$ktor_version")
 }

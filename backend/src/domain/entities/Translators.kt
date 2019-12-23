@@ -12,7 +12,7 @@ object Translators : IntIdTable() {
 }
 
 class Translator(id: EntityID<Int>) : IntEntity(id) {
-    companion object : IntEntityClass<Author>(Authors)
+    companion object : IntEntityClass<Translator>(Translators)
 
-    var name by Authors.name
+    var name by Translators.name
 }

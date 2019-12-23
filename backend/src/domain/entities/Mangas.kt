@@ -22,9 +22,9 @@ class Manga(id: EntityID<Int>) : IntEntity(id) {
     var description by Mangas.description
     var image by Mangas.image
     var status by Mangas.status
-    var types by Type referencedOn Mangas.type
+    var type by Type referencedOn Mangas.type
     var tags by Tag via MangaTag
     var chapters by Chapter via MangaChapter
     var translators by Translator via MangaTranslator
-    var author by Author via MangaAuthor
+    var authors by Author via MangaAuthor
 }

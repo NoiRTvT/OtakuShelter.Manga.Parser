@@ -10,7 +10,7 @@ object Types : IntIdTable() {
 }
 
 class Type(id: EntityID<Int>) : IntEntity(id) {
-    companion object : IntEntityClass<Tag>(Types)
+    companion object : IntEntityClass<Type>(Types)
 
     var name by Types.name
 }

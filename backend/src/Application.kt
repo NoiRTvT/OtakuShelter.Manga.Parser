@@ -1,6 +1,7 @@
 package com.otakushelter
 
 import com.otakushelter.controllers.healthCheck
+import com.otakushelter.controllers.parseAllManga
 import com.otakushelter.domain.entities.*
 import com.otakushelter.extensions.getStringProperty
 import com.otakushelter.utils.config
@@ -40,7 +41,7 @@ fun Application.module() {
 
     transaction {
         addLogger(StdOutSqlLogger)
-        SchemaUtils.create(
+        SchemaUtils.createMissingTablesAndColumns(
             Mangas,
             Authors,
             Chapters,
@@ -51,11 +52,13 @@ fun Application.module() {
             Pages,
             Tags,
             Translators,
-            Types
+            Types,
+            ChapterPage
         )
     }
 
     routing {
         healthCheck()
+        parseAllManga()
     }
 }
