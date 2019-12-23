@@ -28,15 +28,10 @@ fun parseMangaToDatabase(mangaListItem: String) {
     transaction {
         val parsedName = parser.parseByDocument { parseName(it) }
 
-        if (!Manga.find { Mangas.name eq parsedName }.empty())
-            close()
+        if (Manga.findFirst { Mangas.name eq parsedName } != null) return@transaction
 
         val parsedType = parser.parseByDocument {
-            parseType(it).let {
-                Type.findFirst { Types.name eq it } ?: Type.new {
-                    name = it
-                }
-            }
+            parseType(it).let { Type.findFirst { Types.name eq it } ?: Type.new { name = it } }
         }
         val parsedTags = SizedCollection(parser.parseByDocument { parseTags(it) }.map {
             Tag.findFirst { Tags.name eq it } ?: Tag.new { name = it }
