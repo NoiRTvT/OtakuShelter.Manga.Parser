@@ -10,12 +10,6 @@ class Parser {
         document = Jsoup.connect(url).get()
         return function(document)
     }
-
-    fun setDocumentByURL(url: String): Parser {
-        document = Jsoup.connect(url).get()
-        return this
-    }
-
     fun <R> parseByDocument(function: (Document) -> R): R = function(document)
 
     companion object {

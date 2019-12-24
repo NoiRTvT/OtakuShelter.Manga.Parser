@@ -9,6 +9,7 @@ object Chapters : IntIdTable() {
     val name = varchar("name", 100).uniqueIndex()
     val order = integer("order")
     val uploadDate = date("upload_date")
+    val sourceURL = varchar("source_url", 300)
 }
 
 class Chapter(id: EntityID<Int>) : IntEntity(id) {
@@ -17,5 +18,6 @@ class Chapter(id: EntityID<Int>) : IntEntity(id) {
     var name by Chapters.name
     var order by Chapters.order
     var uploadDate by Chapters.uploadDate
+    var sourceURL by Chapters.sourceURL
     var pages by Page via ChapterPage
 }

@@ -11,6 +11,7 @@ object Mangas : IntIdTable() {
     val description = varchar("description", 5000)
     val image = varchar("image", 300)
     val status = varchar("status", 100)
+    val sourceURL = varchar("source_url", 300)
     val type = reference("type", Types)
 }
 
@@ -22,6 +23,7 @@ class Manga(id: EntityID<Int>) : IntEntity(id) {
     var description by Mangas.description
     var image by Mangas.image
     var status by Mangas.status
+    var sourceURL by Mangas.sourceURL
     var type by Type referencedOn Mangas.type
     var tags by Tag via MangaTag
     var chapters by Chapter via MangaChapter
