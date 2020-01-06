@@ -1,6 +1,6 @@
 package com.otakushelter.domain.parser
 
-import com.otakushelter.domain.entities.Chapter
+import com.otakushelter.domain.manga.Chapter
 import org.joda.time.DateTime
 import org.jsoup.nodes.Document
 

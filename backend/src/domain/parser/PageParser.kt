@@ -1,8 +1,6 @@
 package com.otakushelter.domain.parser
 
-import com.otakushelter.domain.entities.Page
-import org.jetbrains.exposed.sql.SizedCollection
-import org.jetbrains.exposed.sql.transactions.transaction
+import com.otakushelter.domain.manga.Page
 import org.jsoup.nodes.Document
 
 fun parsePages(document: Document): List<Page> {

@@ -1,6 +1,6 @@
 package com.otakushelter.controllers
 
-import com.otakushelter.domain.entities.*
+import com.otakushelter.domain.manga.*
 import com.otakushelter.domain.parser.*
 import com.otakushelter.extensions.findFirst
 import com.otakushelter.extensions.mapToSizedCollection

@@ -1,16 +1,16 @@
-package com.otakushelter.domain.entities
+package com.otakushelter.domain.manga
 
 import org.jetbrains.exposed.dao.EntityID
 import org.jetbrains.exposed.dao.IntEntity
 import org.jetbrains.exposed.dao.IntEntityClass
 import org.jetbrains.exposed.dao.IntIdTable
 
-object Tags : IntIdTable() {
+object Types : IntIdTable() {
     val name = varchar("name", 100).uniqueIndex()
 }
 
-class Tag(id: EntityID<Int>) : IntEntity(id) {
-    companion object : IntEntityClass<Tag>(Tags)
+class Type(id: EntityID<Int>) : IntEntity(id) {
+    companion object : IntEntityClass<Type>(Types)
 
-    var name by Tags.name
+    var name by Types.name
 }

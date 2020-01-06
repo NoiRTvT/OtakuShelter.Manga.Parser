@@ -2,7 +2,7 @@ package com.otakushelter
 
 import com.otakushelter.controllers.healthCheck
 import com.otakushelter.controllers.parseAllManga
-import com.otakushelter.domain.entities.*
+import com.otakushelter.domain.manga.*
 import com.otakushelter.extensions.getStringProperty
 import com.otakushelter.utils.config
 import io.ktor.application.Application
@@ -13,7 +13,10 @@ import io.ktor.features.*
 import io.ktor.routing.routing
 import io.ktor.serialization.serialization
 import io.ktor.util.KtorExperimentalAPI
-import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.sql.Database
+import org.jetbrains.exposed.sql.SchemaUtils
+import org.jetbrains.exposed.sql.StdOutSqlLogger
+import org.jetbrains.exposed.sql.addLogger
 import org.jetbrains.exposed.sql.transactions.transaction
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
